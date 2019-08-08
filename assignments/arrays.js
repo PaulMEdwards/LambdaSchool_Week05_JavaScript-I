@@ -1,4 +1,5 @@
 // To help us use arrays with real world problems we are going to simulate a used car dealer that has 50 cars in their inventory.
+console.log(`\nArrays:`);
 
 // The car dealer has all of their inventory housed in the array seen below.  Scroll down past the data to find out how you can help the car dealer.
 
@@ -89,4 +90,4 @@ console.log(oldCars.length);
 // ==== Challenge 6 ====
 console.log(`\nA buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.`);
 let BMWAndAudi = inventory.filter(x => x.car_make == 'BMW' || x.car_make == 'Audi');
-console.log(BMWAndAudi);
+console.log(JSON.stringify(BMWAndAudi));

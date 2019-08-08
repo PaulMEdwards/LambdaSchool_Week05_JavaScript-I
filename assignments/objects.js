@@ -1,4 +1,5 @@
 // Let's get some practice writing a few objects for a new group of interns at a small business.
+console.log(`\nObjects:`);
 
 // ==== Challenge 1: Writing Objects ==== 
 // HR needs some information on the new interns put into a database.  Given an id, email, first name, and gender. Create an object for each person in the company list:
@@ -93,6 +94,7 @@ console.log(interns.adaine.multiplyNums(3,4));
 // 2. Nest a child object in the parent object with name and age as well.  The name will be George and the age will be 50.
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
+console.log(`\nStretch:`);
 
 class Person {
   constructor(name, age) {
@@ -120,22 +122,24 @@ child.child = grandchild;
 
 grandchild.parent = child;
 
-// Log the parent object's name
+console.log(`\nLog the parent object's name`);
 console.log(`Parent name: `+parent.name);
 
-// Log the child's age
+console.log(`\nLog the child's age`);
 console.log(`Child age: `+child.age);
 
-// Log the name and age of the grandchild
+console.log(`\nLog the name and age of the grandchild`);
 console.log(`Grandchild name: `+grandchild.name+` age: `+grandchild.age);
 
-// Have the parent speak
+console.log(`\nHave the parent speak`);
 parent.speak();
 
-// Have the child speak
+console.log(`\nHave the child speak`);
 child.speak();
+console.log(`\nHave the child speak (called as a linked list)`);
 parent.child.speak();
 
-// Have the grandchild speak
+console.log(`\nHave the grandchild speak`);
 grandchild.speak();
+console.log(`\nHave the grandchild speak (called as a linked list)`);
 parent.child.child.speak();
