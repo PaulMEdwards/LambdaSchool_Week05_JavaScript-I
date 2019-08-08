@@ -74,7 +74,6 @@ console.log(lastCar);
 // ==== Challenge 3 ====
 console.log(`\nThe marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console`);
 let carModels = inventory.map(x => x.car_model).sort();
-console.log(typeof(carModels));
 console.log(carModels);
 
 // ==== Challenge 4 ====
