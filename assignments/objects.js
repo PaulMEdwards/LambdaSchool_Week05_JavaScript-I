@@ -78,11 +78,14 @@ console.log(`\nAntonietta's Gender:`);
 console.log(interns.adaine.gender);
 
 // ==== Challenge 3: Object Methods ==== 
-// Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
-// console.log(kennan.speak());
+console.log(`\nGive Kennan the ability to say "Hello, my name is Kennan!"`);  // Use the console.log provided as a hint.
+interns.kdiben.speak = function () { return `Hello, my name is ` + interns.kdiben.name + `!`; };
+console.log(interns.kdiben.speak());
 
-// Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-//console.log(antonietta.multiplyNums(3,4));
+console.log(`\nAntonietta loves math, give her the ability to multiply two numbers together and return the product.`);  // Use the console.log provided as a hint.
+// interns.adaine.multiplyNums = function (num1, num2) { return num1 * num2; };
+interns.adaine.multiplyNums = (num1, num2) => num1 * num2;
+console.log(interns.adaine.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
