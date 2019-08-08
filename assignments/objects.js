@@ -88,24 +88,54 @@ interns.adaine.multiplyNums = (num1, num2) => num1 * num2;
 console.log(interns.adaine.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
-
 // ==== Stretch Challenge: Nested Objects and the this keyword ==== 
-
 // 1. Create a parent object with properties for name and age.  Make the name Susan and the age 70.
 // 2. Nest a child object in the parent object with name and age as well.  The name will be George and the age will be 50.
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-const parent = {};
+class Person {
+  constructor(name, age) {
+    let person = {};
+    this.name = name;
+    this.age = age;
+
+    this.speak = function() { console.log(`My name is ` + this.name); };
+
+    this.parent = Person;
+    this.child = Person;
+  }
+}
+
+const parent = new Person("Susan", 70);
+const child = new Person("George", 50);
+const grandchild = new Person("Sam", 30);
+
+//doubly-linked list functionality for the heck of it
+parent.child = child;
+parent.grandchild = grandchild;
+
+child.parent = parent;
+child.child = grandchild;
+
+grandchild.parent = child;
 
 // Log the parent object's name
+console.log(`Parent name: `+parent.name);
 
 // Log the child's age
+console.log(`Child age: `+child.age);
 
 // Log the name and age of the grandchild
+console.log(`Grandchild name: `+grandchild.name+` age: `+grandchild.age);
 
 // Have the parent speak
+parent.speak();
 
 // Have the child speak
+child.speak();
+parent.child.speak();
 
 // Have the grandchild speak
+grandchild.speak();
+parent.child.child.speak();
